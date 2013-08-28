@@ -1,0 +1,591 @@
+<html>
+
+<head>
+<title>Loughborough University Room Booking System</title>
+<link href="../style.css" rel="stylesheet" type="text/css"/>
+
+
+<script type='text/javascript'>
+
+var noR = 1
+
+function x1(i){
+	var a1 = i
+		if (a1==""){document.getElementById('modulecode').selectedIndex = 0; document.getElementById("studentno").value=''}
+	if (a1=="Programming"){document.getElementById('modulecode').selectedIndex = 1; document.getElementById("studentno").value='82'}
+		if (a1=="Essential Skills"){document.getElementById('modulecode').selectedIndex = 2; document.getElementById("studentno").value='91'}
+			if (a1=="The WWW"){document.getElementById('modulecode').selectedIndex = 3; document.getElementById("studentno").value='53'}
+				if (a1=="Group Projects"){document.getElementById('modulecode').selectedIndex = 4; document.getElementById("studentno").value='88'}
+				}
+
+
+function x2(i){
+	var a1 = i
+					if (a1==""){document.getElementById('modulename').selectedIndex = 0; document.getElementById("studentno").value=''}
+		if (a1=="COB123"){document.getElementById('modulename').selectedIndex = 1; document.getElementById("studentno").value='82'}
+	if (a1=="COB312"){document.getElementById('modulename').selectedIndex = 2; document.getElementById("studentno").value='91'}
+		if (a1=="COB405"){document.getElementById('modulename').selectedIndex =3; document.getElementById("studentno").value='53'}
+			if (a1=="COB290"){document.getElementById('modulename').selectedIndex = 4; document.getElementById("studentno").value='88'}
+			}
+
+function x3(i){
+	
+	if(i=='all'){
+	document.getElementById("sem11").checked=true;
+	document.getElementById("sem11").disabled=true;
+	
+	document.getElementById("sem12").checked=true;
+	document.getElementById("sem12").disabled=true;
+	
+	document.getElementById("sem13").checked=true;
+	document.getElementById("sem13").disabled=true;
+	
+	document.getElementById("sem14").checked=true;
+	document.getElementById("sem14").disabled=true;
+	
+	document.getElementById("sem15").checked=true;
+	document.getElementById("sem15").disabled=true;
+	
+	document.getElementById("sem16").checked=true;
+	document.getElementById("sem16").disabled=true;
+	
+	document.getElementById("sem17").checked=true;
+	document.getElementById("sem17").disabled=true;
+	
+	document.getElementById("sem18").checked=true;
+	document.getElementById("sem18").disabled=true;
+	
+	document.getElementById("sem19").checked=true;
+	document.getElementById("sem19").disabled=true;
+	
+	document.getElementById("sem110").checked=true;
+	document.getElementById("sem110").disabled=true;
+	
+	document.getElementById("sem111").checked=true;
+	document.getElementById("sem111").disabled=true;}
+	
+	
+	if(i=='not'){	document.getElementById("sem11").checked=false;
+	document.getElementById("sem11").disabled=false;
+	
+	document.getElementById("sem12").checked=false;
+	document.getElementById("sem12").disabled=false;
+	
+	document.getElementById("sem13").checked=false;
+	document.getElementById("sem13").disabled=false;
+	
+	document.getElementById("sem14").checked=false;
+	document.getElementById("sem14").disabled=false;
+	
+	document.getElementById("sem15").checked=false;
+	document.getElementById("sem15").disabled=false;
+	
+	document.getElementById("sem16").checked=false;
+	document.getElementById("sem16").disabled=false;
+	
+	document.getElementById("sem17").checked=false;
+	document.getElementById("sem17").disabled=false;
+	
+	document.getElementById("sem18").checked=false;
+	document.getElementById("sem18").disabled=false;
+	
+	document.getElementById("sem19").checked=false;
+	document.getElementById("sem19").disabled=false;
+	
+	document.getElementById("sem110").checked=false;
+	document.getElementById("sem110").disabled=false;
+	
+	document.getElementById("sem111").checked=false;
+	document.getElementById("sem111").disabled=false;}}
+
+
+
+
+
+function x4(i){
+	
+	if(i=='all'){
+	document.getElementById("sem21").checked=true;
+	document.getElementById("sem21").disabled=true;
+	
+	document.getElementById("sem22").checked=true;
+	document.getElementById("sem22").disabled=true;
+	
+	document.getElementById("sem23").checked=true;
+	document.getElementById("sem23").disabled=true;
+	
+	document.getElementById("sem24").checked=true;
+	document.getElementById("sem24").disabled=true;
+	
+	document.getElementById("sem25").checked=true;
+	document.getElementById("sem25").disabled=true;
+	
+	document.getElementById("sem26").checked=true;
+	document.getElementById("sem26").disabled=true;
+	
+	document.getElementById("sem27").checked=true;
+	document.getElementById("sem27").disabled=true;
+	
+	document.getElementById("sem28").checked=true;
+	document.getElementById("sem28").disabled=true;
+	
+	document.getElementById("sem29").checked=true;
+	document.getElementById("sem29").disabled=true;
+	
+	document.getElementById("sem210").checked=true;
+	document.getElementById("sem210").disabled=true;
+	
+	document.getElementById("sem211").checked=true;
+	document.getElementById("sem211").disabled=true;}
+	
+	
+	if(i=='not'){	
+	document.getElementById("sem21").checked=false;
+	document.getElementById("sem21").disabled=false;
+	
+	document.getElementById("sem22").checked=false;
+	document.getElementById("sem22").disabled=false;
+	
+	document.getElementById("sem23").checked=false;
+	document.getElementById("sem23").disabled=false;
+	
+	document.getElementById("sem24").checked=false;
+	document.getElementById("sem24").disabled=false;
+	
+	document.getElementById("sem25").checked=false;
+	document.getElementById("sem25").disabled=false;
+	
+	document.getElementById("sem26").checked=false;
+	document.getElementById("sem26").disabled=false;
+	
+	document.getElementById("sem27").checked=false;
+	document.getElementById("sem27").disabled=false;
+	
+	document.getElementById("sem28").checked=false;
+	document.getElementById("sem28").disabled=false;
+	
+	document.getElementById("sem29").checked=false;
+	document.getElementById("sem29").disabled=false;
+	
+	document.getElementById("sem210").checked=false;
+	document.getElementById("sem210").disabled=false;
+	
+	document.getElementById("sem211").checked=false;
+	document.getElementById("sem211").disabled=false;}}
+
+function x5(i){
+	if(i==1)
+	{
+		document.getElementById("prooms").innerHTML = "<strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select>";
+  
+  }
+ 	if(i==2)
+	{
+		document.getElementById("prooms").innerHTML = "<strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select><br><strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select>";
+  
+  } 
+  
+ 	if(i==3)
+	{
+		document.getElementById("prooms").innerHTML = "<strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select><br><strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select><br><strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select>"; }}
+
+
+function x6(){
+	
+	ok=true
+	
+	if(document.getElementById("modulename").value==""){alert("You must enter either a module name or module code"); ok=false}
+	if(document.getElementById("studentno").value==0 || document.getElementById("studentno").value==''){alert("Your entry for Number of Students is invalid"); ok=false}
+	if(document.getElementById("rooms").value==0){alert("Your entry for number of rooms is invalid"); ok=false}
+	if(	
+		document.getElementById("mon1").checked == false && 
+		document.getElementById("mon2").checked == false && 
+		document.getElementById("mon3").checked == false && 
+		document.getElementById("mon4").checked == false && 
+		document.getElementById("mon5").checked == false && 
+		document.getElementById("mon6").checked == false && 
+		document.getElementById("mon7").checked == false && 
+		document.getElementById("mon8").checked == false &&
+		document.getElementById("mon9").checked == false &&
+		document.getElementById("tue1").checked == false &&
+		document.getElementById("tue2").checked == false &&
+		document.getElementById("tue3").checked == false &&
+		document.getElementById("tue4").checked == false &&
+		document.getElementById("tue5").checked == false &&
+		document.getElementById("tue6").checked == false &&
+		document.getElementById("tue7").checked == false &&
+		document.getElementById("tue8").checked == false &&
+		document.getElementById("tue9").checked == false &&
+		document.getElementById("wed1").checked == false &&
+		document.getElementById("wed2").checked == false &&
+		document.getElementById("wed3").checked == false &&
+		document.getElementById("wed4").checked == false &&
+		document.getElementById("wed5").checked == false &&
+		document.getElementById("wed6").checked == false &&
+		document.getElementById("wed7").checked == false &&
+		document.getElementById("wed8").checked == false &&
+		document.getElementById("wed9").checked == false &&
+		document.getElementById("thu1").checked == false &&
+		document.getElementById("thu2").checked == false &&
+		document.getElementById("thu3").checked == false &&
+		document.getElementById("thu4").checked == false &&
+		document.getElementById("thu5").checked == false &&
+		document.getElementById("thu6").checked == false &&
+		document.getElementById("thu7").checked == false &&
+		document.getElementById("thu8").checked == false &&
+		document.getElementById("thu9").checked == false &&
+		document.getElementById("fri1").checked == false &&
+		document.getElementById("fri2").checked == false &&
+		document.getElementById("fri3").checked == false &&
+		document.getElementById("fri4").checked == false &&
+		document.getElementById("fri5").checked == false &&
+		document.getElementById("fri6").checked == false &&
+		document.getElementById("fri7").checked == false &&
+		document.getElementById("fri8").checked == false &&
+		document.getElementById("fri9").checked == false)
+		{alert("You have not selected any periods"); ok=false}
+	return(ok)		
+}
+
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<!-- start of header -->
+<div id="backing">
+	<div id="logo">
+		<h1>Welcome jsmith1!<span class="title"></span></h1>
+		<br>
+		<img src="../images/lulogo.gif" align="right" />
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="start.html">Home</a></li>
+			<li class="current_page_item"><a href="bookings.html">Booking System</a></li>
+        	<li><a href="roominfo.html">Room Information</a></li>
+        	<li><a href="roundinfo.html">Round Information</a></li>
+			<li><a href="summary.html">Summary</a></li>
+			<li><a href="help.html">Contact / Help</a></li>
+			<li><a href="../login.html">Logout</a></li>
+ 		</ul>
+	</div>
+</div>
+<!-- end of header -->
+
+<div id="page">
+	<div id="page-bgtop">
+    
+<!-- start of content -->
+		<div id="page-bgbtm">
+				<div class="post">
+                <div id="content">
+				<p class="meta">
+                Wednesday 17th November 2010<br>
+                Current Round: Priority | <strong>Round 1</strong> | Round 2 | Single Room <br>
+                <a href="roundinfo.html">Click here to view round information</a></p> </div><div id="content2">
+                
+					<div class="entry"><strong><u>Add Booking</u></strong>
+                  <form name="booking form" method="post" action="bookings2.html" onSubmit="return(x6())">
+                    <p>
+                      <label for="modulecode"><strong>Module Name:</strong></label>
+                      <select name="modulecode" id="modulename" onChange="x1(this.value)">
+                        <option selected> </option>
+                        <option>Programming</option>
+                        <option>Essential Skills</option>
+                        <option>The WWW</option>
+                        <option>Group Projects</option>
+                      </select>
+                      
+                      
+                      <label for="modulename"><strong><br>
+                        <br>
+                        Module Code:</strong></label>
+                      <select name="modulecode2" id="modulecode" onChange="x2(this.value)">
+                        <option selected> </option>
+                        <option>COB123</option>
+                        <option>COB312</option>
+                        <option>COB405</option>
+                        <option>COB290</option>
+                      </select>
+<br>
+                      <br>
+                      <strong>No. of Students:</strong>
+                      <input name="studentno6" type="text" id="studentno" size="5" maxlength="4" />
+                      
+                      
+                      <label for="day"><strong><br>
+                      </strong></label>
+                    </p>
+                    <table id="times">
+                      <tr>
+                        <th>&nbsp;</th>
+                        <th colspan="9" align="center">Period</th>
+                      </tr>
+                      <tr>
+                        <th>&nbsp;</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                      </tr>
+                      <tr>
+                        <th>Monday</th>
+                        <td><input name="period" id="mon1" type="checkbox"/></td>
+                        <td><input name="period" id="mon2" type="checkbox"/></td>
+                        <td><input name="period" id="mon3" type="checkbox"/></td>
+                        <td><input name="period" id="mon4" type="checkbox"/></td>
+                        <td><input name="period" id="mon5" type="checkbox"/></td>
+                        <td><input name="period" id="mon6" type="checkbox"/></td>
+                        <td><input name="period" id="mon7" type="checkbox"/></td>
+                        <td><input name="period" id="mon8" type="checkbox"/></td>
+                        <td><input name="period" id="mon9" type="checkbox"/></td>
+                      </tr>
+                      <tr>
+                        <th>Tuesday</th>
+                        <td><input name="period" id="tue1" type="checkbox"/></td>
+                        <td><input name="period" id="tue2" type="checkbox"/></td>
+                        <td><input name="period" id="tue3" type="checkbox"/></td>
+                        <td><input name="period" id="tue4" type="checkbox"/></td>
+                        <td><input name="period" id="tue5" type="checkbox"/></td>
+                        <td><input name="period" id="tue6" type="checkbox"/></td>
+                        <td><input name="period" id="tue7" type="checkbox"/></td>
+                        <td><input name="period" id="tue8" type="checkbox"/></td>
+                        <td><input name="period" id="tue9" type="checkbox"/></td>
+                      </tr>
+                      <tr>
+                        <th>Wednesday</th>
+                        <td><input name="period" id="wed1" type="checkbox"/></td>
+                        <td><input name="period" id="wed2" type="checkbox"/></td>
+                        <td><input name="period" id="wed3" type="checkbox"/></td>
+                        <td><input name="period" id="wed4" type="checkbox"/></td>
+                        <td><input name="period" id="wed5" type="checkbox"/></td>
+                        <td><input name="period" id="wed6" type="checkbox"/></td>
+                        <td><input name="period" id="wed7" type="checkbox"/></td>
+                        <td><input name="period" id="wed8" type="checkbox"/></td>
+                        <td><input name="period" id="wed9" type="checkbox"/></td>
+                      </tr>
+                      <tr>
+                        <th>Thursday</th>
+                        <td><input name="period" id="thu1" type="checkbox"/></td>
+                        <td><input name="period" id="thu2" type="checkbox"/></td>
+                        <td><input name="period" id="thu3" type="checkbox"/></td>
+                        <td><input name="period" id="thu4" type="checkbox"/></td>
+                        <td><input name="period" id="thu5" type="checkbox"/></td>
+                        <td><input name="period" id="thu6" type="checkbox"/></td>
+                        <td><input name="period" id="thu7" type="checkbox"/></td>
+                        <td><input name="period" id="thu8" type="checkbox"/></td>
+                        <td><input name="period" id="thu9" type="checkbox"/></td>
+                      </tr>
+                      <tr>
+                        <th>Friday</th>
+                        <td><input name="period" id="fri1" type="checkbox"/></td>
+                        <td><input name="period" id="fri2" type="checkbox"/></td>
+                        <td><input name="period" id="fri3" type="checkbox"/></td>
+                        <td><input name="period" id="fri4" type="checkbox"/></td>
+                        <td><input name="period" id="fri5" type="checkbox"/></td>
+                        <td><input name="period" id="fri6" type="checkbox"/></td>
+                        <td><input name="period" id="fri7" type="checkbox"/></td>
+                        <td><input name="period" id="fri8" type="checkbox"/></td>
+                        <td><input name="period" id="fri9" type="checkbox"/></td>
+                      </tr>
+                    </table>
+                    <p><strong>Weeks in Semester 1:
+                    </strong>
+       
+                   <input name="sem1" type="radio" id="sem1" value="all" onChange="x3(this.value)" checked>
+                    All
+                    <input type="radio" name="sem1" value="not" id="sem1" onChange="x3(this.value)">
+                    Let me choose
+                      <br>
+                      <br>
+                      <label>
+                        <input name="Weeks in Semester 1:" type="checkbox" id="sem11" value="checkbox" checked disabled>
+                      1</label>
+                      <label>
+                        <input name="Weeks in Semester 1:" type="checkbox" id="sem12" value="checkbox" checked disabled>
+                      2</label>
+                      <label>
+                        <input name="Weeks in Semester 1:" type="checkbox" id="sem13" value="checkbox" checked disabled>
+                      3</label>
+                      <label>
+                        <input name="Weeks in Semester 1:" type="checkbox" id="sem14" value="checkbox" checked disabled>
+                      4</label>
+                      <label>
+                        <input name="Weeks in Semester 1:" type="checkbox" id="sem15" value="checkbox" checked disabled>
+                      5</label>
+                      <label>
+                        <input name="Weeks in Semester 1:" type="checkbox" id="sem16" value="checkbox" checked disabled>
+                      6</label>
+                      <label>
+                        <input name="Weeks in Semester 1:" type="checkbox" id="sem17" value="checkbox" checked disabled>
+                      7</label>
+                      <label>
+                        <input name="Weeks in Semester 1:" type="checkbox" id="sem18" value="checkbox" checked disabled>
+                      8</label>
+                      <label>
+                        <input name="Weeks in Semester 1:" type="checkbox" id="sem19" value="checkbox" checked disabled>
+                      9</label>
+                      <label>
+                        <input name="Weeks in Semester 1:" type="checkbox" id="sem110" value="checkbox" checked disabled>
+                      10</label>
+                      <label>
+                        <input name="Weeks in Semester 1:" type="checkbox" id="sem111" value="checkbox" checked disabled>
+                      11</label>
+                    </p>
+<p>&nbsp;</p>
+<p><strong>Weeks in Semester 2: </strong>
+  <label>
+    <input name="sem2" type="radio" id="sem2_1" value="all" onChange="x4(this.value);" checked>
+    All</label>
+  <label>
+    <input type="radio" name="sem2" value="not" id="sem2_2" onChange="x4(this.value);">
+    Let me choose</label>
+  <br><br>
+  <label>
+    <input name="WeeksinSemester1:_" type="checkbox" id="sem21" value="checkbox" checked disabled>
+    1</label>
+  <label>
+    <input name="WeeksinSemester1:_" type="checkbox" id="sem22" value="checkbox" checked disabled>
+    2</label>
+  <label>
+    <input name="WeeksinSemester1:_" type="checkbox" id="sem23" value="checkbox" checked disabled>
+    3</label>
+  <label>
+    <input name="WeeksinSemester1:_" type="checkbox" id="sem24" value="checkbox" checked disabled>
+    4</label>
+  <label>
+    <input name="WeeksinSemester1:_" type="checkbox" id="sem25" value="checkbox" checked disabled>
+    5</label>
+  <label>
+    <input name="WeeksinSemester1:_" type="checkbox" id="sem26" value="checkbox" checked disabled>
+    6</label>
+  <label>
+    <input name="WeeksinSemester1:_" type="checkbox" id="sem27" value="checkbox" checked disabled>
+    7</label>
+  <label>
+    <input name="WeeksinSemester1:_" type="checkbox" id="sem28" value="checkbox" checked disabled>
+    8</label>
+  <label>
+    <input name="WeeksinSemester1:_" type="checkbox" id="sem29" value="checkbox" checked disabled>
+    9</label>
+  <label>
+    <input name="WeeksinSemester1:_" type="checkbox" id="sem210" value="checkbox" checked disabled>
+    10</label>
+  <label>
+    <input name="WeeksinSemester1:_" type="checkbox" id="sem211" value="checkbox" checked disabled>
+    11</label>
+  <br>
+</p>
+<p><strong>No. of Rooms:</strong>
+  <label for="rooms"></label>
+  <input name="rooms" type="text" id="rooms" value="1" size="6" onChange="x5(this.value);">
+  <br> <br>
+  <strong>Style of Room </strong>:
+  Traditional:
+  <input name="radio" type="radio" id="trad6" value="trad" checked />
+  <label for="trad6"></label>
+  Seminar:
+  <input type="radio" name="radio" id="sem6" value="sem" />
+  <label for="sem6"></label>
+  
+  <br><br>
+  <strong>Additional Requirements:</strong> Close to previous
+  <input type="checkbox" name="close6" id="close6" />
+  <label for="close6"></label>
+  Speakers
+  <input type="checkbox" name="speakers6" id="speakers6" />
+  <label for="speakers6"></label>
+  
+  wheelchair access
+  <input type="checkbox" name="disabled6" id="disabled6" />
+  <label for="disabled6"></label>
+  Mature PG group
+  <input type="checkbox" name="PG6" id="PG6" />
+  <label for="PG6"></label>
+  
+  Fixed Computer
+  <input type="checkbox" name="comp6" id="comp6" />
+  <label for="comp6"></label>
+  
+  <br> <br>
+  <p id='prooms'>
+  <strong>Preferred Room ID: </strong>
+  <label for="proom"></label>
+  <select name="proom" id="proom">
+    <option>No Preference</option>
+    <option>J001</option>
+    <option>A012</option>
+    <option>U112</option>
+    <option>Cope</option>
+  </select>
+ </p>
+  
+  
+  </td>
+  </tr>
+  </table>
+</p>
+<input type="submit" name="save" id="save" value="Add"/>
+			  </form>
+            </p>
+                   
+                    
+                    
+				  </div>
+			  </div>
+			</div>
+		</div>
+<!-- end of content -->
+<div id="sidebar">
+
+
+
+<div style="height:800px;overflow:scroll;">
+<br><em> Note: All the submissions below will be submitted when the current round closes</em>
+<h2> <u>Live View: </u></h2>
+<p>Essential Skills-COB312 (<a href="">View</a>/<a href="bookings5.html">Edit</a>/<a href="">Delete</a>)</p>
+
+  <p></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p align="center">&nbsp;</p>
+  <div align="center">Click the button below to submit you submissions early. Once you do this you may not edit or change any bookings. </div>
+  <form method="post" action="bookings10.html">
+    <div align="center">
+      <input type="submit" value="Submit All Bookings" onClick="check();"/>
+    </div>
+  </form>
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+	</div>
+</div>
+
+<!-- start of footer -->
+<div id="footer">
+<p>Loughborough University Computer science Group 13</p>
+</div>
+<!-- end of footer -->
+
+</body>
+</html>

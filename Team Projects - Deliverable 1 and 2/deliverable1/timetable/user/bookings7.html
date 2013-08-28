@@ -1,0 +1,448 @@
+<html>
+
+<head>
+<title>Loughborough University Room Booking System</title>
+<link href="../style.css" rel="stylesheet" type="text/css"/>
+
+
+<script type='text/javascript'>
+
+var noR = 1
+
+function x1(i){
+	var a1 = i
+		if (a1==""){document.getElementById('modulecode').selectedIndex = 0; document.getElementById("studentno").value=''}
+	if (a1=="Programming"){document.getElementById('modulecode').selectedIndex = 1; document.getElementById("studentno").value='82'}
+		if (a1=="Essential Skills"){document.getElementById('modulecode').selectedIndex = 2; document.getElementById("studentno").value='91'}
+			if (a1=="The WWW"){document.getElementById('modulecode').selectedIndex = 3; document.getElementById("studentno").value='53'}
+				if (a1=="Group Projects"){document.getElementById('modulecode').selectedIndex = 4; document.getElementById("studentno").value='88'}
+				}
+
+
+function x2(i){
+	var a1 = i
+					if (a1==""){document.getElementById('modulename').selectedIndex = 0; document.getElementById("studentno").value=''}
+		if (a1=="COB123"){document.getElementById('modulename').selectedIndex = 1; document.getElementById("studentno").value='82'}
+	if (a1=="COB312"){document.getElementById('modulename').selectedIndex = 2; document.getElementById("studentno").value='91'}
+		if (a1=="COB405"){document.getElementById('modulename').selectedIndex =3; document.getElementById("studentno").value='53'}
+			if (a1=="COB290"){document.getElementById('modulename').selectedIndex = 4; document.getElementById("studentno").value='88'}
+			}
+
+function x3(i){
+	
+	if(i=='all'){
+	document.getElementById("sem11").checked=true;
+	document.getElementById("sem11").disabled=true;
+	
+	document.getElementById("sem12").checked=true;
+	document.getElementById("sem12").disabled=true;
+	
+	document.getElementById("sem13").checked=true;
+	document.getElementById("sem13").disabled=true;
+	
+	document.getElementById("sem14").checked=true;
+	document.getElementById("sem14").disabled=true;
+	
+	document.getElementById("sem15").checked=true;
+	document.getElementById("sem15").disabled=true;
+	
+	document.getElementById("sem16").checked=true;
+	document.getElementById("sem16").disabled=true;
+	
+	document.getElementById("sem17").checked=true;
+	document.getElementById("sem17").disabled=true;
+	
+	document.getElementById("sem18").checked=true;
+	document.getElementById("sem18").disabled=true;
+	
+	document.getElementById("sem19").checked=true;
+	document.getElementById("sem19").disabled=true;
+	
+	document.getElementById("sem110").checked=true;
+	document.getElementById("sem110").disabled=true;
+	
+	document.getElementById("sem111").checked=true;
+	document.getElementById("sem111").disabled=true;}
+	
+	
+	if(i=='not'){	document.getElementById("sem11").checked=false;
+	document.getElementById("sem11").disabled=false;
+	
+	document.getElementById("sem12").checked=false;
+	document.getElementById("sem12").disabled=false;
+	
+	document.getElementById("sem13").checked=false;
+	document.getElementById("sem13").disabled=false;
+	
+	document.getElementById("sem14").checked=false;
+	document.getElementById("sem14").disabled=false;
+	
+	document.getElementById("sem15").checked=false;
+	document.getElementById("sem15").disabled=false;
+	
+	document.getElementById("sem16").checked=false;
+	document.getElementById("sem16").disabled=false;
+	
+	document.getElementById("sem17").checked=false;
+	document.getElementById("sem17").disabled=false;
+	
+	document.getElementById("sem18").checked=false;
+	document.getElementById("sem18").disabled=false;
+	
+	document.getElementById("sem19").checked=false;
+	document.getElementById("sem19").disabled=false;
+	
+	document.getElementById("sem110").checked=false;
+	document.getElementById("sem110").disabled=false;
+	
+	document.getElementById("sem111").checked=false;
+	document.getElementById("sem111").disabled=false;}}
+
+
+
+
+
+function x4(i){
+	
+	if(i=='all'){
+	document.getElementById("sem21").checked=true;
+	document.getElementById("sem21").disabled=true;
+	
+	document.getElementById("sem22").checked=true;
+	document.getElementById("sem22").disabled=true;
+	
+	document.getElementById("sem23").checked=true;
+	document.getElementById("sem23").disabled=true;
+	
+	document.getElementById("sem24").checked=true;
+	document.getElementById("sem24").disabled=true;
+	
+	document.getElementById("sem25").checked=true;
+	document.getElementById("sem25").disabled=true;
+	
+	document.getElementById("sem26").checked=true;
+	document.getElementById("sem26").disabled=true;
+	
+	document.getElementById("sem27").checked=true;
+	document.getElementById("sem27").disabled=true;
+	
+	document.getElementById("sem28").checked=true;
+	document.getElementById("sem28").disabled=true;
+	
+	document.getElementById("sem29").checked=true;
+	document.getElementById("sem29").disabled=true;
+	
+	document.getElementById("sem210").checked=true;
+	document.getElementById("sem210").disabled=true;
+	
+	document.getElementById("sem211").checked=true;
+	document.getElementById("sem211").disabled=true;}
+	
+	
+	if(i=='not'){	
+	document.getElementById("sem21").checked=false;
+	document.getElementById("sem21").disabled=false;
+	
+	document.getElementById("sem22").checked=false;
+	document.getElementById("sem22").disabled=false;
+	
+	document.getElementById("sem23").checked=false;
+	document.getElementById("sem23").disabled=false;
+	
+	document.getElementById("sem24").checked=false;
+	document.getElementById("sem24").disabled=false;
+	
+	document.getElementById("sem25").checked=false;
+	document.getElementById("sem25").disabled=false;
+	
+	document.getElementById("sem26").checked=false;
+	document.getElementById("sem26").disabled=false;
+	
+	document.getElementById("sem27").checked=false;
+	document.getElementById("sem27").disabled=false;
+	
+	document.getElementById("sem28").checked=false;
+	document.getElementById("sem28").disabled=false;
+	
+	document.getElementById("sem29").checked=false;
+	document.getElementById("sem29").disabled=false;
+	
+	document.getElementById("sem210").checked=false;
+	document.getElementById("sem210").disabled=false;
+	
+	document.getElementById("sem211").checked=false;
+	document.getElementById("sem211").disabled=false;}}
+
+function x5(i){
+	if(i==1)
+	{
+		document.getElementById("prooms").innerHTML = "<strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select>";
+  
+  }
+ 	if(i==2)
+	{
+		document.getElementById("prooms").innerHTML = "<strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select><br><strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select>";
+  
+  } 
+  
+ 	if(i==3)
+	{
+		document.getElementById("prooms").innerHTML = "<strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select><br><strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select><br><strong>Preferred Room ID: </strong> <label for='proom'></label> <select name='proom' id='proom'> <option>No Preference</option> <option>J001</option> <option>A012</option> <option>U112</option> <option>Cope</option> </select>"; }}
+
+
+function x6(){
+	
+	ok=true
+	
+	if(document.getElementById("modulename").value==""){alert("You must enter either a module name or module code"); ok=false}
+	if(document.getElementById("studentno").value==0 || document.getElementById("studentno").value==''){alert("Your entry for Number of Students is invalid"); ok=false}
+	if(document.getElementById("rooms").value==0){alert("Your entry for number of rooms is invalid"); ok=false}
+	if(	
+		document.getElementById("mon1").checked == false && 
+		document.getElementById("mon2").checked == false && 
+		document.getElementById("mon3").checked == false && 
+		document.getElementById("mon4").checked == false && 
+		document.getElementById("mon5").checked == false && 
+		document.getElementById("mon6").checked == false && 
+		document.getElementById("mon7").checked == false && 
+		document.getElementById("mon8").checked == false &&
+		document.getElementById("mon9").checked == false &&
+		document.getElementById("tue1").checked == false &&
+		document.getElementById("tue2").checked == false &&
+		document.getElementById("tue3").checked == false &&
+		document.getElementById("tue4").checked == false &&
+		document.getElementById("tue5").checked == false &&
+		document.getElementById("tue6").checked == false &&
+		document.getElementById("tue7").checked == false &&
+		document.getElementById("tue8").checked == false &&
+		document.getElementById("tue9").checked == false &&
+		document.getElementById("wed1").checked == false &&
+		document.getElementById("wed2").checked == false &&
+		document.getElementById("wed3").checked == false &&
+		document.getElementById("wed4").checked == false &&
+		document.getElementById("wed5").checked == false &&
+		document.getElementById("wed6").checked == false &&
+		document.getElementById("wed7").checked == false &&
+		document.getElementById("wed8").checked == false &&
+		document.getElementById("wed9").checked == false &&
+		document.getElementById("thu1").checked == false &&
+		document.getElementById("thu2").checked == false &&
+		document.getElementById("thu3").checked == false &&
+		document.getElementById("thu4").checked == false &&
+		document.getElementById("thu5").checked == false &&
+		document.getElementById("thu6").checked == false &&
+		document.getElementById("thu7").checked == false &&
+		document.getElementById("thu8").checked == false &&
+		document.getElementById("thu9").checked == false &&
+		document.getElementById("fri1").checked == false &&
+		document.getElementById("fri2").checked == false &&
+		document.getElementById("fri3").checked == false &&
+		document.getElementById("fri4").checked == false &&
+		document.getElementById("fri5").checked == false &&
+		document.getElementById("fri6").checked == false &&
+		document.getElementById("fri7").checked == false &&
+		document.getElementById("fri8").checked == false &&
+		document.getElementById("fri9").checked == false)
+		{alert("You have not selected any periods"); ok=false}
+	return(ok)		
+}
+
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<!-- start of header -->
+<div id="backing">
+	<div id="logo">
+		<h1>Welcome jsmith1!<span class="title"></span></h1>
+		<br>
+		<img src="../images/lulogo.gif" align="right" />
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="start.html">Home</a></li>
+			<li class="current_page_item"><a href="bookings.html">Booking System</a></li>
+        	<li><a href="roominfo.html">Room Information</a></li>
+        	<li><a href="roundinfo.html">Round Information</a></li>
+			<li><a href="summary.html">Summary</a></li>
+			<li><a href="help.html">Contact / Help</a></li>
+			<li><a href="../login.html">Logout</a></li>
+ 		</ul>
+	</div>
+</div>
+<!-- end of header -->
+
+<div id="page">
+	<div id="page-bgtop">
+    
+<!-- start of content -->
+		<div id="page-bgbtm">
+				<div class="post">
+                <div id="content">
+				<p class="meta">
+                Wednesday 17th November 2010<br>
+                Current Round: Priority | <strong>Round 1</strong> | Round 2 | Single Room <br>
+                <a href="roundinfo.html">Click here to view round information</a></p> </div><div id="content2">
+                
+					<div class="entry">
+					  <p><a href="bookings8.html">Click here to add another booking</a></p>
+					  <p><strong><u>View Booking</u></strong>
+				      </p>
+					  <form name="booking form" method="post" action="bookings2.html" onSubmit="return(x6())">
+                    <p>
+                      <label for="modulecode"><strong>Module Name:</strong></label>
+                      Essential Skills
+                      <label for="modulename"><strong><br>
+                        <br>
+                      Module Code:</strong></label>
+                      COB312<br>
+                      <br>
+                      <strong>No. of Students:</strong>
+                      <label for="day">91<br>
+                      </label>
+                    </p>
+                    <table width="367" height="163" id="times">
+                      <tr>
+                        <th width="123">&nbsp;</th>
+                        <th colspan="9" align="center">Period</th>
+                      </tr>
+                      <tr>
+                        <th>&nbsp;</th>
+                        <th width="22">1</th>
+                        <th width="22">2</th>
+                        <th width="22">3</th>
+                        <th width="22">4</th>
+                        <th width="22">5</th>
+                        <th width="22">6</th>
+                        <th width="22">7</th>
+                        <th width="22">8</th>
+                        <th width="22">9</th>
+                      </tr>
+                      <tr>
+                        <th>Monday</th>
+                        <td>&nbsp;</td>
+                        <td bgcolor="#FF0000">&nbsp;</td>
+                        <td bgcolor="#FF0000">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <th>Tuesday</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <th>Wednesday</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <th>Thursday</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <th>Friday</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+                    <p><strong>Weeks in Semester 1:
+                    </strong>All</p>
+<p><strong>Weeks in Semester 2: </strong>All<br>
+</p>
+<p><strong>No. of Rooms:</strong> 1<br> <br>
+  <strong>Style of Room: </strong>Traditional<br>
+  <br>
+  <strong>Additional Requirements:</strong> None
+  <p><strong>Preferred Room ID:</strong> J001 
+                    </form>
+            </p>
+                   
+                    
+                    
+				  </div>
+			  </div>
+			</div>
+		</div>
+<!-- end of content -->
+<div id="sidebar">
+
+
+
+<div style="height:800px;overflow:scroll;">
+<br><em> Note: All the submissions below will be submitted when the current round closes</em>
+<h2> <u>Live View: </u></h2>
+<p>Essential Skills-COB312 (<a href="">View</a>/<a href="">Edit</a>/<a href="">Delete</a>)</p>
+
+  <p></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p align="center">&nbsp;</p>
+  <div align="center">Click the button below to submit you submissions early. Once you do this you may not edit or change any bookings. </div>
+  <form method="post" action="bookings10.html">
+    <div align="center">
+      <input type="submit" value="Submit All Bookings" onClick="check();"/>
+    </div>
+  </form>
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+	</div>
+</div>
+
+<!-- start of footer -->
+<div id="footer">
+<p>Loughborough University Computer science Group 13</p>
+</div>
+<!-- end of footer -->
+
+</body>
+</html>

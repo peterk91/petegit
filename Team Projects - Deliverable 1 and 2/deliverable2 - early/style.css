@@ -1,0 +1,342 @@
+body {		background: #2A2A2F;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 14px;}
+
+h1{		margin: 0;
+		padding: 0;
+		font-weight: normal;
+		font-size: 2em;
+		color: #FFFFFF;}
+
+a {		text-decoration: none;
+		color: #AD1443;}
+
+a:hover {	text-decoration: underline;}
+
+
+/* Header */
+
+#header {	width: 1100px;
+		height: 100px;
+		margin: 0px auto;
+		background: WHITE;}
+
+#header h1 {	float: left;
+		padding: 25px 10px 0px 30px;
+		letter-spacing: -1px;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-size: 42px;
+		color: #2A2A2F;}
+
+#header img {	padding: 10px 20px 0px 20px;}
+
+
+/* Menu */
+
+#menu {	width: 1100px;
+		height: 45px;
+		margin: auto;
+		background: GREY;
+		border-top: 2px solid;
+		border-bottom: 2px solid;
+}
+
+#menu ul {	margin: auto;
+		list-style: none;
+		line-height: normal;}	
+
+#menu a {	display: block;
+		float: left;
+		height: 24px;
+		padding: 2px 42px 0px 18px;
+		text-decoration: none;
+		text-transform: uppercase;
+		text-shadow: BLACK 0px 1px 1px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 11px;
+		font-weight: normal;
+		color: WHITE;
+		border: none;}
+
+#menu .current_page_item a {
+		color: BLACK;}
+
+#menu a:hover{color: BLACK;
+		text-shadow: WHITE 0px 1px 1px;}
+
+
+
+/* Content */
+
+#page {	width: 1100px;
+		height: 1500px;
+		margin: 0 auto;
+		background: #2A2A2F;}
+
+#bookingspage{	width: 1100px;
+		height: 1500px;
+		margin: 0 auto;
+		background: WHITE}
+
+#roominfopage {width: 1100px;
+		height: 1000px;
+		margin: 0 auto;
+		background: WHITE;}
+
+#summarypage {width: 1100px;
+		height: 920px;
+		margin: 0 auto;
+		background: WHITE;}
+
+#startpage {width: 1100px;
+		height: 920px;
+		margin: 0 auto;
+		background: WHITE;}
+
+#helppage {width: 1100px;
+		height: 920px;
+		margin: 0 auto;
+		background: WHITE;}
+
+#roundpage {width: 1100px;
+		height: 920px;
+		margin: 0 auto;
+		background: WHITE;}
+
+#content {	float: left;
+		width: 1000px;
+		text-align: justify;
+		margin-bottom: 25px;}
+
+
+/* Bookings Page */
+
+#deptSelect{
+		padding: 3px 3px 3px 3px;
+		width: 300px;
+		margin-top:3px;}
+#choicenewold{
+		padding: 3px 3px 3px 3px;
+		width: 300px;
+		margin-top:3px;}
+
+#moduleselection{background: WHITE;
+		margin-right:30px;
+		font-size:80%;
+		width: 450px;
+		height: 225px;
+		margin-top:12px;
+		padding: 5px 0px 0px 0px;
+		border: 1px solid grey;}
+
+
+#deptSelect{float:left;
+		padding: 0px 20px 0px 0px;}
+
+#codeSelect{margin-left:15px;margin-right:25px;}
+
+#topbooking{padding: 20px 0px 20px 0px;
+
+background:WHITE;
+width:1100px;
+}
+
+
+#allmodule{background: #FFFFCC;
+width:48%;
+border-left:1px solid grey;
+height:425px;
+margin-left:23px;
+border-top:1px solid grey;
+border-right:1px solid grey;
+border-bottom:1px solid grey;
+float:left;padding: 0px 5px 0px 10px;}
+
+#alltimes {
+padding: 0px 0px 0px 50px;
+width:53%;
+margin-left:495px;
+background:#FFFFCC;
+border-top:1px solid grey;
+border-right:1px solid grey;
+border-bottom:1px solid grey;
+height:425px;}
+
+
+#allroom{padding: 10px 0px 10px 20px;
+border-left:1px solid grey;
+margin-left:23px;
+background:#FFFFCC;
+width:1030px;
+border-right:1px solid grey;
+border-bottom:1px solid grey}
+
+#button{padding: 20px 0px 20px 0px;
+text-align:center;
+border-left:1px solid grey;
+background:#FFFFCC;
+margin-left:23px;
+width:1050px;
+border-right:1px solid grey;
+border-bottom:1px solid grey}
+
+#times th{background-color:#F5F5DC;border:1px solid black;}
+
+#times td{width:45px;height:30px;border:1px solid black;}
+
+#times table{	width: 450px;
+		background-color:#F5FFFA;
+		font-size:80%;
+		border:1px solid black;
+		border-collapse:collapse;}
+
+#rmfacilities{
+		background:WHITE;
+		height:285px;
+		margin-left:10px;
+		margin-bottom:10px;
+		padding: 3px 3px 3px 3px;
+		border: 1px solid;
+		width:610px;
+		font-size:80%;}
+
+#rmfacilities th{width:90px;
+		text-align:left;}
+
+#rmfacilities table{
+		margin-top:5px;
+		font-size:100%;
+		width: 610px;}
+
+
+
+/* RoomInfo */
+
+
+#facilities{
+		height:285px;
+		margin-left:460px;
+		padding: 3px 3px 3px 3px;
+		border: 1px solid;
+		width:610px;
+		font-size:80%;}
+
+#facilities th{width:90px;
+		text-align:left;}
+
+#facilities table{
+		margin-top:5px;
+		font-size:100%;
+		width: 610px;}
+
+#roomselect{	margin-left:0px;}
+
+
+
+
+#roominfo {	background:#FAFAD2;width: 1000px;
+		border: 2px solid;
+		margin-top: 35px;
+		margin-left: 50px;}
+
+#roominfo h1{	color:BLACK;
+		margin-left: 10px;
+		font-size:130%;
+		text-decoration:underline;
+		display:inline;}
+
+#roominfo h2{	color:GREY;
+		font-size:110%;
+		text-align: left;
+		margin-left: 5px;
+		margin-bottom: 10px;
+		display:inline ;}
+
+#roominfo h3{	color:GREY;
+		font-size:110%;
+		text-align: left;
+		margin-left: 90px;
+		margin-bottom: 10px;
+		display:inline ;}
+
+#roominfo h4{	color:GREY;
+		font-size:110%;
+		text-align: left;
+		margin-left: 90px;
+		margin-bottom: 10px;
+		display:inline ;}
+
+
+#room{		color:BLACK;
+		font-size:160%;
+		text-decoration:underline;}
+
+#infotitle {	font-size:130%;
+		margin:0px auto;
+		text-align: center;
+		text-decoration: underline}
+
+#infoleft{width:27%;float:left;height:35px;}
+#infomid {align:center; margin-top:30px;float:left; width:26%;height:235px;}
+#infomid img{border: 1px solid;}
+#inforight {float:right; width:46%;height:400px;}
+
+
+#infomiddle table{margin-left:6px;margin-bottom:10px;font-size:88%}
+#infomiddle td{width:220px;color:grey;font-weight:bold;}
+#infomiddle th{text-align:left;
+		color:BLACK;
+		font-size:150%;
+		text-decoration:underline;
+		font-weight:normal;
+		width:100px}
+
+#infobottom {padding: 0px 0px 40px 0px;margin-left:10px;}
+
+
+#avali th{background-color:#F5F5DC;border:1px solid black;}
+
+#avali td{width:45px;height:40px;border:1px solid black;}
+
+#avali table{	margin-top:20px;
+		width: 450px;
+		background-color:#F5FFFA;
+		font-size:80%;
+		border:1px solid black;
+		border-collapse:collapse;}
+
+#date {	border-bottom: 1px solid #CCC2A9;
+		padding: 10px 10px 0px 0px;
+		text-align: right;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 15px;
+		font-style: italic;}
+
+
+
+
+#summarytable th{border: 1px solid;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+#footer p {	margin: 0;
+		padding: 30px 0px 0px 0px;
+		line-height: normal;
+		font-size: 10px;
+		text-transform: uppercase;
+		text-align: center;
+		color: WHITE;}

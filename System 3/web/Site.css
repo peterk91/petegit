@@ -1,0 +1,363 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+    background: #EBEDF0;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+    
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 85%;
+    background-color: white;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+    box-shadow: 7px 7px 8px #818181;
+    -webkit-box-shadow: 7px 7px 8px #818181;
+    -moz-box-shadow: 7px 7px 8px #818181;
+    filter: progid:DXImageTransform.Microsoft.dropShadow(color=#818181, offX=7, offY=7, positive=true);
+}
+
+.logo
+{
+    float:left;
+    background:white;
+    padding-bottom:3px;
+    padding-top:3px;
+    padding-left:20px;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: white;
+    width: 100%;
+    
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: white;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+    
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color:#640CAB;
+    width:100%;
+    height:inherit;
+}
+
+div.menu
+{
+    padding: 0px 0px 0px 0px;
+
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    padding-bottom:4px;
+
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #A468D5;
+    border: 1px #582781 solid;
+    border-right: 0px;
+    border-top: 0px;
+    color: #3F046F;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap; 
+}
+
+div.menu ul li a:hover
+{
+    background-color: #A468D5;
+    color: white;
+    text-decoration: none;     
+}
+
+div.menu li a:hover:after
+{
+    content:'';
+    width:0;
+    height:0;
+    position:absolute;
+    left:50%;
+    margin-left:-5px;
+    bottom: 0;
+    border-width:5px; 
+    border-style:solid;
+    border-color: transparent transparent #3F046F transparent; 
+}
+
+
+div.menu ul li a:active
+{
+    background-color: #FFFFCC;
+    color: #3F046F;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float:none;
+    text-align: left;
+    width: auto;
+    background-color:#582781;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding-right: 0px;
+    color: black;
+    float:right;
+    background-color:White;
+}
+
+.loginDisplay a:link
+{
+    color: purple;
+}
+
+.loginDisplay a:visited
+{
+    color: black;
+}
+
+.loginDisplay a:hover
+{
+    color: black;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+#mainInfo
+{
+    width: 65%;
+    float: right;
+
+
+}
+
+#homeUpdate
+{
+margin-top:0%;
+    margin-right:2%;
+    
+
+}
+
+.login_form
+{
+    margin-top:100px;
+    margin-left:40%;
+    margin-right:10%;
+}
+#currentRounds
+{
+    float:right;
+    width:65%;
+margin-bottom:2%;
+}

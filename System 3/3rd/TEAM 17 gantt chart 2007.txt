@@ -1,0 +1,41 @@
+Name	Start_Date	Finish_Date
+Deliverable 3	Wed 09/03/11	Wed 25/05/11
+Planning  the Project	Wed 09/03/11	Thu 10/03/11
+Identify Project Tasks	Wed 09/03/11	Wed 09/03/11
+Create Gantt Chart	Thu 10/03/11	Thu 10/03/11
+Project Management Website	Thu 10/03/11	Wed 23/03/11
+Begin PMW development	Thu 10/03/11	Wed 23/03/11
+Add Discussion Board to PMW	Thu 10/03/11	Fri 11/03/11
+Add Progress Section to PMW	Mon 14/03/11	Wed 16/03/11
+Load Documents into PMW	Thu 17/03/11	Mon 21/03/11
+Add Requirements and Constraints	Thu 10/03/11	Wed 16/03/11
+Add Team Information 	Thu 10/03/11	Wed 16/03/11
+Update ER Diagram and Databases according to Manager Meeting	Thu 10/03/11	Wed 23/03/11
+Timetable System	Wed 16/03/11	Mon 02/05/11
+Create Database using ER Diagrams	Wed 16/03/11	Wed 16/03/11
+Create Master Page	Wed 16/03/11	Fri 18/03/11
+Create Layout	Wed 16/03/11	Thu 17/03/11
+Edit CSS	Fri 18/03/11	Fri 18/03/11
+Create Login Page	Mon 21/03/11	Wed 23/03/11
+Create Home Page	Tue 22/03/11	Thu 24/03/11
+Create Bookings Page	Thu 24/03/11	Thu 31/03/11
+Create My Bookings Page	Thu 24/03/11	Thu 31/03/11
+Create Module Management Page	Fri 01/04/11	Tue 05/04/11
+Create Informaton Page	Tue 05/04/11	Fri 08/04/11
+Create Help Page	Tue 05/04/11	Wed 06/04/11
+Create Round Information Page	Tue 05/04/11	Thu 07/04/11
+Adding Validation to Bookings Page	Tue 26/04/11	Mon 02/05/11
+Add SQL Injection Protection to Login Page	Tue 26/04/11	Wed 27/04/11
+Adding Validation to Module Management Page	Tue 26/04/11	Thu 28/04/11
+Testing	Tue 03/05/11	Wed 11/05/11
+System Testing	Tue 03/05/11	Wed 11/05/11
+Validation Testing	Tue 03/05/11	Wed 11/05/11
+SQL Injection Testing	Tue 03/05/11	Thu 05/05/11
+Browser Compatability Testing	Wed 04/05/11	Mon 09/05/11
+Project Management Website Testing	Mon 09/05/11	Tue 10/05/11
+Document Link Testing	Mon 09/05/11	Tue 10/05/11
+Documentation	Tue 03/05/11	Thu 19/05/11
+Report A	Tue 03/05/11	Mon 16/05/11
+Report B	Mon 16/05/11	Tue 17/05/11
+Report C	Wed 18/05/11	Thu 19/05/11
+Presentation	Wed 25/05/11	Wed 25/05/11

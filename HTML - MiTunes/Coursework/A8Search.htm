@@ -1,0 +1,213 @@
+<html>
+
+<head>
+
+<style type="text/css">
+
+.buttons 
+	{
+	height:60px;
+	width:80px;
+	font-size: 95%;
+	}
+
+.keys
+	{
+	height:40px;
+	width:40px;
+	font-size: 150%;
+	}
+
+.backspacebutton
+	{
+	height:30px;
+	width:100px;
+	font-size: 95%;
+	}
+.spacebuttonstyle
+	{
+	height:40px;
+	width:350px;
+	}
+
+.textpad
+	{
+	height: 30px;
+	width: 150px;
+	font-size: 20
+	}
+
+
+
+</style>
+
+
+<script type='text/javascript'>
+
+//Name: Peter Krepa
+//ID: A913274
+//Login: copk2
+
+
+//Making the Keyboard
+
+var abc=[['a','b','c','d','e','f','g','h','i','j'],['k','l','m','n','o','p','q','r','s','t'],['u','v','w','x','y','z']]		//global array of arrays of different keyboards, 
+var qwerty=[['q','w','e','r','t','y','u','i','o','p'],['a','s','d','f','g','h','j','k','l'],['z','x','c','v','b','n','m']]   
+var numbers=[['1','2','3','4','5','6','7','8','9','0']]
+var symbols=[['!','?',',','.','(',')'],['£','$','#','@','&']]
+
+function makekeyboard(a) //this function produces the keyboard. whichever layout is asked for it produces.
+	{
+	if (a=='abc') {var keytype = abc}
+	if (a=='qwerty') { var keytype = qwerty;}
+	if (a=='numbers') { var keytype = numbers;}
+	if (a=='symbols') { var keytype = symbols;}
+	
+    s="<center>"
+    for(i=0;i<keytype.length;i++)	//for every array in the keytypearray it makes a new line
+		{
+		for(x=0;x<keytype[i].length;x++) //created every button
+			{
+			s+="<input type = 'button' class='keys' value ="+keytype[i][x]+" id = 'akey"+i+"' onclick = 'clickkey(this.value); search()'>"
+			}
+		s+='<br>'
+		}
+	s += '</center>'
+	document.getElementById('keyboard').innerHTML = s
+	}
+
+function clickkey(x)	//when a key is pressed it adds the value of the key to the textbox value
+	{
+	a = document.getElementById("keypad").value
+	a = a + x
+	document.getElementById("keypad").value = a
+	}
+	
+function backspace()	//takes the last character off the textbox value
+	{
+	a = document.getElementById("keypad").value
+	a = a.substr(0, a.length-1)
+	document.getElementById("keypad").value = a
+	}
+
+function wipe()	//removes everything in the text box
+	{
+	document.getElementById("keypad").value = ''
+	search()
+	}
+
+//Searching
+
+function search() //does the search
+	{
+	var a = document.getElementById("keypad").value //takes the value of a
+	if(a=='') //if a is equal to nothing it tells the user they can use the search
+		{
+		parent.document.getElementById('albumlist').contentDocument.getElementById("selectalbum").selectedIndex = 1
+		var s = '<center><br><br><font size="5"><u><b>TO SEARCH: use the search box below</b></u></font></center>'
+		parent.searchlist = ''
+		parent.writeit('songlist',s)
+		parent.writeit('track','')
+		}	
+	else //if there is something in the search
+		{
+		parent.document.getElementById('albumlist').contentDocument.getElementById("selectalbum").selectedIndex = 1
+		var list = []	//two lists are made. list which is a list of the albumnumbers that the searched term is on according to artistname and albumtitle
+		var list2 = []	//list2, which is a list of the (album,song) numbers, of which the searched term appears on the tracktitle. this is only added if it has not already been found in list one, otherwise they could double up
+		var count1 = 0
+		var count2 = 0
+		for(x=0;x<parent.allalbums.length;x++)
+			{
+			var d1 = parent.allalbums[x].albumtitle
+			var d2 = parent.allalbums[x].artistname
+			var b = a.toLowerCase()
+			var t1 = d1.toLowerCase()
+			var t2 = d2.toLowerCase()
+			var e1 = t1.indexOf(b)
+			var e2 = t2.indexOf(b)
+			var f1 = t1.substring(e1,e1+b.length)
+			var f2 = t2.substring(e2,e2+b.length)
+			if (f1==b || f2==b)
+				{
+				list[count1]= x
+				count1 += 1
+				}
+			else
+				{
+				for(h=0;h<parent.allsongs[x].length;h++)
+						{
+						var i = parent.allsongs[x][h].tracktitle
+						var j = i.toLowerCase()
+						var k = j.indexOf(b)
+						var l = j.substring(k,k+b.length)
+						if (l==b)
+							{
+							var temp = []
+							temp[0] = [x]
+							temp[1] = [h]
+							list2[count2] = temp
+							count2 += 1
+							}
+						}
+				}
+			}
+		var listing = '<center><select size="10" onchange ="parent.clickall(this.options[this.selectedIndex].id)" style="width: 99%" >'	//makes a html select list of all the songs on all the albums in list. it also stores the albumnumber and song number in each option
+		for(x=0;x<list.length;x++)
+			{
+			for(y=0; y<parent.allsongs[list[x]].length; y++)
+				{
+				listing += '<option id = "'+list[x]+','+y+'">'+parent.allalbums[list[x]].artistname+'/'+parent.allalbums[list[x]].albumtitle+'/'+parent.allsongs[list[x]][y].tracktitle+'</option>'
+				}
+			}
+		if(list2.length!= 0)	//adds all the songs that are in list2 and stores the albumnumber and song number in each option
+			{
+			for(m=0;m<list2.length;m++)
+				{
+				listing += '<option id = "'+list2[m][0]+','+list2[m][1]+'">'+parent.allalbums[list2[m][0]].artistname+'/'+parent.allalbums[list2[m][0]].albumtitle+'/'+parent.allsongs[list2[m][0]][list2[m][1]].tracktitle+'</option>'
+				}
+			}
+		listing += '</select>'
+		var info = '<center><u><font-size = "3">Currently searching for: </u>"'+a+'"<br>in the Album, Artist and Track names</font></center><br><br>'
+		parent.searchlist = info+listing //makes this a global variable in the parent document, so it can be reffered back to if you click away
+		parent.writeit('songlist',parent.searchlist)  //write the list
+		}
+
+	}
+
+</script>
+
+</head>
+
+<body onload="makekeyboard('abc')">
+
+<center>
+
+<input type='button' class='buttons' value='abc' onclick = 'makekeyboard(this.value)'/>
+
+<input type='button' class='buttons' value='qwerty' onclick = 'makekeyboard(this.value)' />
+
+<input type='button' class='buttons' value='numbers' onclick = 'makekeyboard(this.value)'/>
+
+<input type='button' class='buttons' value='symbols' onclick = 'makekeyboard(this.value)' />
+
+<br><br>
+
+<input type =' text' class='textpad' id = 'keypad'  onkeyup = 'search()'/> 
+
+<input type='button' class='backspacebutton' value='Backspace' onclick = 'backspace(); search()' /> 
+
+<input type='button' class='backspacebutton' value='Clear' onclick = 'wipe()' /> 
+
+<br><br>
+
+<div id="keyboard"></div>
+
+<center><br>
+
+<input type = "button" class= "spacebuttonstyle"  value=" " onclick = "clickkey(this.value); search()" />
+
+</center>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<albums>
+	<album>
+		<title>Birdsong Small Birds</title>
+		<artist>BBC</artist>
+		<artwork>Wren</artwork>
+		<track>
+			<title>Dunnock</title>
+			<mp3>Birdsong-Dunnock.mp3</mp3>
+		</track>
+		<track>
+			<title>Robin</title>
+			<mp3>Birdsong-Robin.mp3</mp3>
+		</track>
+		<track>
+			<title>Siskin</title>
+			<mp3>Birdsong-Siskin.mp3</mp3>
+		</track>
+		<track>
+			<title>Wren</title>
+			<mp3>Birdsong-Wren.mp3</mp3>
+		</track>
+	</album>
+	<album>
+		<title>Birdsong Large Birds</title>
+		<artist>BBC</artist>
+		<artwork>Wood Pigeon</artwork>
+		<track>
+			<title>Collared Dove</title>
+			<mp3>Birdsong-Collared_Dove.mp3</mp3>
+		</track>
+		<track>
+			<title>Greater spotted woodpecker</title>
+			<mp3>Birdsong-Greater_spotted_woodpecker.mp3</mp3>
+		</track>
+		<track>
+			<title>Lesser spotted woodpecker</title>
+			<mp3>Birdsong-Lesser_spotted_woodpecker.mp3</mp3>
+		</track>
+		<track>
+			<title>Swallow</title>
+			<mp3>Birdsong-Swallow.mp3</mp3>
+		</track>
+		<track>
+			<title>Swift</title>
+			<mp3>Birdsong-Swift.mp3</mp3>
+		</track>
+		<track>
+			<title>Wood pigeon</title>
+			<mp3>Birdsong-Wood_pigeon.mp3</mp3>
+		</track>
+	</album>
+	<album>
+		<title>Birdsong Medium Birds</title>
+		<artist>BBC</artist>
+		<artwork>Blackbird</artwork>
+		<track>
+			<title>Blackbird</title>
+			<mp3>Birdsong-Blackbird.mp3</mp3>
+		</track>
+		<track>
+			<title>Fieldfare</title>
+			<mp3>Birdsong-Fieldfare.mp3</mp3>
+		</track>
+		<track>
+			<title>Mistle Thrush</title>
+			<mp3>Birdsong-Mistle_Thrush.mp3</mp3>
+		</track>
+		<track>
+			<title>Redwing</title>
+			<mp3>Birdsong-Redwing.mp3</mp3>
+		</track>
+		<track>
+			<title>Song Thrush</title>
+			<mp3>Birdsong-Song_Thrush.mp3</mp3>
+		</track>
+	</album>
+	<album>
+		<title>Birdsong Finches</title>
+		<artist>BBC</artist>
+		<artwork>Greenfinch</artwork>
+		<track>
+			<title>Bullfinch</title>
+			<mp3>Birdsong-Bullfinch.mp3</mp3>
+		</track>
+		<track>
+			<title>Chaffinch</title>
+			<mp3>Birdsong-Chaffinch.mp3</mp3>
+		</track>
+		<track>
+			<title>Goldfinch</title>
+			<mp3>Birdsong-Goldfinch.mp3</mp3>
+		</track>
+		<track>
+			<title>Greenfinch</title>
+			<mp3>Birdsong-Greenfinch.mp3</mp3>
+		</track>
+	</album>
+	<album>
+		<title>Birdsong Tits</title>
+		<artist>BBC</artist>
+		<artwork>BlueTit</artwork>
+		<track>
+			<title>BlueTit</title>
+			<mp3>Birdsong-Blue_Tit.mp3</mp3>
+		</track>
+		<track>
+			<title>Coal Tit</title>
+			<mp3>Birdsong-Coal_Tit.mp3</mp3>
+		</track>
+		<track>
+			<title>Great Tit</title>
+			<mp3>Birdsong-Great_Tit.mp3</mp3>
+		</track>
+		<track>
+			<title>Long tailed tit</title>
+			<mp3>Birdsong-Long_tailed_tit.mp3</mp3>
+		</track>
+	</album>
+</albums>

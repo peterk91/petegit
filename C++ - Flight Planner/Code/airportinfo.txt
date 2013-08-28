@@ -1,0 +1,15 @@
+Birmingham	BHX	18	80
+Heathrow	LHR	18	120
+Manchester	MAN	18	150
+Paris		PAR	17	60
+Milan		MLN	12	70
+Barcelona	BAR	12	60
+Venice		VNC	15	90
+Rome		RME	15	60
+Warsaw		WRS	10	70
+Krakow		KRA	10	50
+Vienna		VIE	14	60
+Munich		MUN	15	40
+Frankfurt	FKT	15	40
+
+

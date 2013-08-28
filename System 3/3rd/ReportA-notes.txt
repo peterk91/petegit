@@ -1,0 +1,72 @@
+*** LOGIN ***
+
+-department drop down populates correctly
+-password and department are matched correctly
+-remember me function works
+
+
+*** MAKE A BOOKING ***
+
+-round selection displays only current open rounds
+-module part drop down populates correctly
+-module part - on change filters module code
+-module code list box populates correctly
+-module code - on change filters module name
+-module name list box populates correctly
+-number of students only allows numbers between 0-415
+-number of students - on change updates room
+
+-number of rooms - on change extra rooms appear
+-room type - on change updates room
+-room style - on change updates room
+-park - on change updates room
+-building - on change updates room
+-facilities - on change updates room
+
+-time info - at least one is selected
+-weeks - at least on is selected
+
+-on submission - database is updated accordingly
+
+
+*** MODULE MANAGEMENT ***
+
+-department part of code - only shows logged on dept.
+-module part drop down populates correctly
+-module code - only numbers, 3 characters, not blank
+-module name - not blank
+-on submission - database is updated accordingly
+
+
+*** ROOM INFORMATION ***
+
+-park list box populates correctly
+-building id list box populates correctly
+-building name list box populates correctly
+-room list box populates correctly
+
+-advanced filters on/off works correctly
+-room type - on change updates room
+-room style - on change updates room
+-room capacity - on change updates room
+-room facilities - on change updates room
+
+-room list box - on select- correct room info appears
+-semester drop down populates correctly
+-
+-
+
+
+*** ROUND INFORMATION ***
+
+-current rounds - displays correct info
+-upcoming rounds - displays correct info
+-closed rounds - displays correct info
+
+
+*** MY BOOKINGS ***
+
+-select period drop down - filters page correctly
+-list/table view - changes page correctly
+
+

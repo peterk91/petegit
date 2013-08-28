@@ -1,0 +1,263 @@
+<html>
+
+<head>
+
+<title>
+MiTunes
+</title>
+
+<style type="text/css">
+
+body {background-color:#FFDDBB;}
+h2 {color:black; font-weight: normal; text-decoration: underline; font-family: Calibri, sans serif; font-size:15pt;}
+h3 {color:darkred; text-decoration: underline;  padding-left: 10pt; font-family: Calibri, sans serif; font-size:10.5pt;}
+
+.window
+	{
+	background: #99DDFF;
+	border: 1px solid black;
+	width: 30%;
+	height: 47%;
+	margin: 5px;
+	}
+
+.keyboardpanel
+	{
+	background: #F8F8FF;
+	border: 1px solid black;
+	width: 93%;
+	height: 47%;
+	margin: 5px;
+	}
+
+</style>
+
+
+<script type='text/javascript'>
+
+//Name: Peter Krepa
+//ID: A913274
+//Login: copk2
+
+//LOADING THE XML
+
+var XML = new Object();
+
+//two classes of browser catered for: W3C compliant and IE
+XML.newDocument=function(rootTagName,namespaceURL){
+	if(!rootTagName)rootTagName='';
+	if(!namespaceURL)namespaceURL='';
+	if(document.implementation && document.implementation.createDocument){
+		//W3C
+		return(document.implementation.createDocument(namespaceURL,rootTagName,null));
+	}
+	else if (window.ActiveXObjectlert)
+	{
+		//IE
+		var doc= new ActiveXObject("MSXML2.DOMDocument");
+		//more if params not empty- see p503 of Flanagan/Javascript
+		return(doc);
+	}
+	else alert("Browser cannot handle script");
+}
+
+XML.load=function(url){
+
+
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","http://www.peterkrepa.co.uk/music.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+
+	return(xmlDoc);
+}
+
+
+
+
+
+
+
+
+var xmldoc; 					// global to hold the javascript internal version of the external xml document
+
+function dataFromTag(node,t){
+	var d=node.getElementsByTagName(t);
+	if(d.length==0)
+		return('');
+	return(d[0].firstChild.nodeValue);
+}
+
+//Making Main Records
+
+var allalbums = [] 				//defining global arrays
+var allsongs = []
+var searchlist = ''				//is defined by the keyboard but is there so it can be reffered back to if search is clicked away from
+var albumnumber
+
+function makerecords() 			//Uses the xml and puts the album details into records which are put into the global arrays
+	{
+
+	xmldoc=XML.load("music.xml");
+	var xmlall = xmldoc.getElementsByTagName('album')
+	for(x=0;x<xmlall.length;x++)
+		{ 
+		var record={}
+		album=xmlall[x]
+		record.artistname=dataFromTag(album,'artist')
+		record.albumtitle=dataFromTag(album,'title')
+		record.artwork=dataFromTag(album,'artwork')
+		allalbums[x]=record									//in the allalbums array for every album there is .artistname .albumtitle and .artwork stored, which can be accessed by the albumnumber
+		var tracks=album.getElementsByTagName('track')
+		var tracklisting=[]
+		for(i=0;i<tracks.length;i++)
+			{
+			var record={}
+			record.tracktitle=dataFromTag(tracks[i],'title')
+			record.mp3name=dataFromTag(tracks[i],'mp3')
+			tracklisting[i]=record
+			}
+		allsongs[x]=tracklisting							//in the allsongs array for every album there is .tracktitle and .mp3name which can be accessed by the same albumnumber as above
+		}
+	}
+
+//MAKING LISTS
+
+function makelist(a,b,c)	//Takes a, the name for a list, b, the contents for the list and c, a size for a list, and produces a html select list.
+	{
+	var list = '<center><select size = "'+c+'" id = "select'+a+'" onchange = "parent.click'+a+'(this.selectedIndex)" style="width: 220px" >'	
+	list += '<option selected="selected">'+b[0]+'</option>'	
+	for(i=1;i<b.length;i++)
+		{
+		list += '<option>'+b[i]+'</option>'
+		}	
+	list += '</select></center>'
+	return(list)
+	}
+	
+function writeit(a,b)	//this writes the content to a selected iframe, writen to tidy up script and help me write it
+	{
+	b = '<hmtl><head></head><body>' + b		//opens the html tags
+	b += '</body></html>'					//closes the html tags
+	with(document.getElementById(a).contentDocument)
+		{
+		open();
+		write(b);
+		close();
+		}	
+	}
+	
+function makealbumlist()	//Makes a list of all the albums and includes All and Search in the list
+	{
+	list = []
+	list[0] = 'All'
+	list[1]= 'Search'
+	for(a= 0; a<allalbums.length; a++)
+		{
+		list[a+2] = allalbums[a].artistname+'/'+allalbums[a].albumtitle
+		}
+	list = makelist('album',list,15)
+	writeit('albumlist',list)	
+	}
+	
+function clickalbum(b)	//This is called when you click on an album in the list. b is the selectedindex
+	{
+	if(b>1)						//as there are All and Search it is only a real album when b is above1
+		{
+		albumnumber = b-2 		//take off to find album number 2 due to All and Search
+		list = []
+		for(a=0; a<allsongs[albumnumber].length; a++)
+			{
+			list[a] = allsongs[albumnumber][a].tracktitle
+			}
+		list = makelist('song',list,12)	
+		var info ='<center><u><font-size = "3">Artist:</u> '+allalbums[albumnumber].artistname+'<br><br><u>Album:</u> '+allalbums[albumnumber].albumtitle+'</font><br><br></center>'
+		writeit('songlist',info+list)
+		writeit('track','')
+		}
+	if(b==1) 					//If search is selected
+		{
+		if(searchlist=='') 		//it will tell user to use searchbox if nothing is selected
+			{
+			var s = '<center><br><br><font size="5"><u><b>TO SEARCH: use the search box below</b></u></font></center>'
+			writeit('songlist',s)
+			writeit('track','')
+			}
+		else 					//it displays all the search results
+			{
+			writeit('songlist',searchlist)
+			}
+		}
+	if(b==0)					//If all is selected it calls a function make all
+		{
+		makeall()
+		}
+
+	}
+
+function makeall() //makes a html select list of all the tracks availible
+	{
+	var z=0
+	var list = '<center><select size="10" onchange ="parent.clickall(this.options[this.selectedIndex].id)" style="width: 220px" >' //onchange the function clickall is called with the id of the option
+	for(x=0;x<allalbums.length;x++)
+		{
+		for(a=0; a<allsongs[x].length; a++)
+			{
+			list += '<option id = "'+x+','+a+'">'+allsongs[x][a].tracktitle+'</option>'		//the id of the option is first the album number then the song number
+			}
+		}
+	var info ='<center><u><font-size = "3">Artist:</u> All <br><br><u>Album:</u> All </font><br><br></center>'
+	writeit('songlist',info+list)
+		}
+
+function clicksong(b)	//this function is called when a song is clicked. it uses the global albumnumber and song number to pull up the details from the records
+	{
+	var songnumber = b
+	var information = '<center><h3> Song: '+allsongs[albumnumber][songnumber].tracktitle+'<br><br>Artist: '+allalbums[albumnumber].artistname+'<br><br> Album: '+allalbums[albumnumber].albumtitle+'</h3>'	
+	var art ='<img src="Images/' +allalbums[albumnumber].artwork+   '.jpg" width= "160px" height = "160px" />'
+	var player = " <embed src='mp3/"+allalbums[albumnumber].artistname+"/"+allalbums[albumnumber].albumtitle+"/"+allsongs[albumnumber][songnumber].mp3name+"' loop='true' autoplay='false' width='145' height='60'></center>"
+	writeit('track',information+art+player)
+	}
+
+function clickall(b)	//when a song is clicked in the all list this function defines the albumnumber globally and then calls clicksong with the songnumber
+	{
+	var b1 = b.indexOf(',')
+	var b2 = b.substring(0,b1)
+	var b3 = b.substring(b1+1,b.length)
+	albumnumber = b2
+	clicksong(b3)
+	}
+	
+
+	
+</script>
+
+</head>
+
+<body onload='makerecords();makealbumlist();makeall()'>
+
+<center>
+
+<iframe id="albumlist" class = 'window' /></iframe>
+
+<iframe id='songlist' class = 'window'/></iframe>
+
+<iframe id="track" class = 'window'/></iframe>
+
+<br>
+
+<iframe src = "A8Search.htm" id="keyboard" class = "keyboardpanel"></iframe>
+
+</center>
+
+</body>
+
+</html>

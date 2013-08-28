@@ -1,0 +1,446 @@
+/* Written By Peter Krepa */
+
+
+/* Main */
+body {
+background : #2a2a2f;
+font-family : Arial, Helvetica, sans-serif;
+font-size : 14px;
+}
+h1 {
+margin : 0;
+padding : 0;
+font-weight : normal;
+font-size : 2em;
+color : #ffffff;
+}
+a {
+text-decoration : none;
+color : #ad1443;
+}
+a:hover {
+text-decoration : underline;
+}
+#header {
+width : 1100px;
+height : 100px;
+margin : 0 auto;
+background : white;
+}
+#header h1 {
+float : left;
+padding : 25px 10px 0 30px;
+letter-spacing : -1px;
+font-family : Georgia, "Times New Roman", Times, serif;
+font-size : 42px;
+color : #2a2a2f;
+}
+#header img {
+padding : 10px 20px 0 20px;
+}
+
+/* Menu */
+
+#menu {
+width : 1100px;
+height : 45px;
+margin : auto;
+border-top : 2px solid;
+border-bottom : 2px solid;
+background: GREY
+}
+#menu ul {
+margin : auto;
+list-style : none;
+line-height : normal;
+}
+#menu a {
+display : block;
+float : left;
+height : 24px;
+padding : 2px 20px 0 20px;
+text-decoration : none;
+text-transform : uppercase;
+font-family : Arial, Helvetica, sans-serif;
+font-size : 11px;
+font-weight : normal;
+color : white;
+border : none;
+}
+#menu .current_page_item a {
+color : black;
+}
+#menu a:hover {
+color : black;
+}
+
+/* Pages */
+
+#page {
+width : 1100px;
+height : 1500px;
+margin : 0 auto;
+background : #2a2a2f;
+}
+#bookingspage {
+width : 1080px;
+padding-left : 20px;
+height : 1500px;
+margin : 0 auto;
+background : white;
+}
+#roominfopage {
+width : 1100px;
+height : 1000px;
+margin : 0 auto;
+background : white;
+}
+#summarypage {
+width : 1000px;
+padding : 0 50px 0 50px;
+height : 2000px;
+margin : 0 auto;
+background : white;
+}
+#startpage {
+width : 1000px;
+padding : 0 50px 0 50px;
+height : 920px;
+margin : 0 auto;
+background : white;
+}
+#helppage {
+width : 1000px;
+padding : 0 50px 0 50px;
+height : 1400px;
+margin : 0 auto;
+background : white;
+}
+#roundpage {
+width : 1000px;
+padding : 0 50px 0 50px;
+height : 920px;
+margin : 0 auto;
+background : white;
+}
+
+
+/* Bookings Page */
+
+#content {
+float : left;
+width : 1000px;
+text-align : justify;
+margin-bottom : 25px;
+}
+#deptSelect {
+padding : 3px 3px 3px 3px;
+width : 300px;
+margin-top : 3px;
+}
+#choicenewold {
+padding : 3px 3px 3px 3px;
+width : 300px;
+margin-top : 3px;
+}
+#moduleselection {
+background : white;
+margin-right : 30px;
+font-size : 80%;
+width : 450px;
+height : 225px;
+margin-top : 12px;
+padding : 5px 0 0 0;
+}
+#deptSelect {
+float : left;
+padding : 0 20px 0 0;
+}
+#codeSelect {
+margin-left : 15px;
+margin-right : 25px;
+}
+#topbooking {
+padding : 20px 0 20px 0;
+background : white;
+width : 1080px;
+}
+#allmodule {
+background : #ffffcc;
+width : 48%;
+border-right : 1px solid #736F6E;
+border-bottom : 1px solid #736F6E;
+border-left : 1px solid black;
+height : 425px;
+border-top : 1px solid black;
+float : left;
+padding : 0 5px 0 10px;
+}
+#alltimes {
+padding : 0 10px 0 50px;
+border-bottom : 1px solid #736F6E;
+width : 52%;
+margin-left : 472px;
+background : #ffffcc;
+border-top : 1px solid black;
+border-right : 1px solid black;
+height : 425px;
+}
+#allroom {
+padding : 10px 0 10px 20px;
+border-left : 1px solid black;
+background : #ffffcc;
+width : 1030px;
+border-right : 1px solid black;
+border-bottom : 1px solid #736F6E;
+}
+#button {
+padding : 20px 0 20px 0;
+text-align : center;
+border-left : 1px solid black;
+background : #ffffcc;
+width : 1050px;
+border-right : 1px solid black;
+border-bottom : 1px solid black;
+}
+#times th {
+background-color : #f5f5dc;
+border : 1px solid black;
+}
+#times td {
+width : 45px;
+height : 30px;
+border : 1px solid black;
+}
+#times table {
+width : 450px;
+background-color : white;
+font-size : 80%;
+border : 1px solid black;
+border-collapse : collapse;
+}
+#rmfacilities {
+background : white;
+height : 285px;
+margin-left : 10px;
+margin-bottom : 10px;
+padding : 3px 3px 3px 3px;
+border : 1px solid;
+width : 610px;
+font-size : 80%;
+}
+#rmfacilities th {
+width : 90px;
+text-align : left;
+}
+#rmfacilities table {
+margin-top : 5px;
+font-size : 100%;
+width : 610px;
+}
+#facilities {
+height : 285px;
+margin-left : 460px;
+padding : 3px 3px 3px 3px;
+border : 1px solid;
+width : 610px;
+font-size : 80%;
+}
+#facilities th {
+width : 90px;
+text-align : left;
+}
+#facilities table {
+margin-top : 5px;
+font-size : 100%;
+width : 610px;
+}
+#roomselect {
+margin-left : 0;
+}
+#roominfo {
+background : #fafad2;
+width : 1000px;
+border : 2px solid;
+margin-top : 35px;
+margin-left : 50px;
+}
+#roominfo h1 {
+color : black;
+margin-left : 10px;
+font-size : 130%;
+text-decoration : underline;
+display : inline;
+}
+#roominfo h2 {
+font-size : 110%;
+text-align : left;
+margin-left : 5px;
+margin-bottom : 10px;
+display : inline;
+}
+#roominfo h3 {
+font-size : 110%;
+text-align : left;
+margin-left : 90px;
+margin-bottom : 10px;
+display : inline;
+}
+#roominfo h4 {
+font-size : 110%;
+text-align : left;
+margin-left : 90px;
+margin-bottom : 10px;
+display : inline;
+}
+#room {
+color : black;
+font-size : 160%;
+text-decoration : underline;
+}
+#infotitle {
+font-size : 130%;
+margin : 0 auto;
+text-align : center;
+text-decoration : underline;
+}
+#infoleft {
+width : 27%;
+float : left;
+height : 35px;
+}
+#infomid {
+margin-top : 30px;
+float : left;
+width : 26%;
+height : 235px;
+}
+#infomid img {
+border : 1px solid;
+}
+#inforight {
+float : right;
+width : 46%;
+height : 400px;
+}
+#infomiddle table {
+margin-left : 6px;
+margin-bottom : 10px;
+font-size : 88%;
+}
+#infomiddle td {
+width : 220px;
+font-weight : bold;
+}
+#infomiddle th {
+text-align : left;
+color : black;
+font-size : 150%;
+text-decoration : underline;
+font-weight : normal;
+width : 100px;
+}
+#infobottom {
+padding : 0 0 40px 0;
+margin-left : 10px;
+}
+#avali th {
+background-color : #f5f5dc;
+border : 1px solid black;
+}
+#avali td {
+width : 45px;
+height : 40px;
+border : 1px solid black;
+}
+#avali table {
+margin-top : 20px;
+width : 450px;
+background-color : #f5fffa;
+font-size : 80%;
+border : 1px solid black;
+border-collapse : collapse;
+}
+#date {
+border-bottom : 1px solid #ccc2a9;
+padding : 10px 10px 0 0;
+text-align : right;
+font-family : Arial, Helvetica, sans-serif;
+font-size : 15px;
+font-style : italic;
+}
+#pending tr {
+border-bottom : 50px solid white;
+background : #ffd060;
+font-size : 85%;
+}
+#allocated tr {
+border-bottom : 50px solid white;
+background : #c3fdb8;
+font-size : 85%;
+}
+#denied tr {
+border-bottom : 50px solid white;
+background : #ff998b;
+font-size : 85%;
+}
+#partmodchoice {
+margin-bottom : 10px;
+}
+#moduleorpart {
+margin-left : 10px;
+margin-top : 10px;
+margin-right : 20px;
+float : left;
+width : 100px;
+}
+#partdiv {
+float : left;
+width : 100px;
+}
+#weeksdiv {
+padding : 10px 10px 10px 10px;
+height : 190px;
+border : 1px solid black;
+width : 165px;
+}
+#timetablediv th {
+width : 30px;
+background-color : #f5f5dc;
+border : 1px solid black;
+}
+#timetablediv td {
+height : 40px;
+border : 1px solid black;
+}
+#timetablediv table {
+margin-top : 20px;
+width : 1000px;
+background-color : #f5fffa;
+font-size : 100%;
+height : 350px;
+border : 1px solid black;
+border-collapse : collapse;
+}
+#leftsidestart {
+width : 600px;
+float : left;
+margin-top : 30px;
+}
+#updates {
+margin-left : 680px;
+width : 300px;
+padding : 5px 5px 5px 5px;
+height : 300px;
+margin-top : 30px;
+overflow : auto;
+}
+#footer p {
+margin : 0;
+padding : 30px 0 0 0;
+line-height : normal;
+font-size : 10px;
+text-transform : uppercase;
+text-align : center;
+color : white;
+}
