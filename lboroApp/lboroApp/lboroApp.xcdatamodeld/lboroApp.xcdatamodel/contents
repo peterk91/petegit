@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AUClub" representedClassName="AUClub" syncable="YES">
+        <attribute name="chosen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Building" representedClassName="Building" syncable="YES">
+        <attribute name="buildingid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" syncable="YES">
+        <attribute name="building" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chosen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endtime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eventid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="periodID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="periodLength" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="room" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startPeriod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="starttime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="week" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="LabelEdition" representedClassName="LabelEdition" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Module" representedClassName="Module" syncable="YES">
+        <attribute name="chosen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moduleID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Newsstory" representedClassName="Newsstory" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Room" representedClassName="Room" syncable="YES">
+        <attribute name="buildingid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roomid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Society" representedClassName="Society" syncable="YES">
+        <attribute name="chosen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="databaseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TVSegment" representedClassName="TVSegment" syncable="YES">
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="YearPeriods" representedClassName="YearPeriods" syncable="YES">
+        <attribute name="enddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="periodID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="semester" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="week" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AUClub" positionX="-216" positionY="144" width="128" height="88"/>
+        <element name="Building" positionX="144" positionY="222" width="128" height="75"/>
+        <element name="Event" positionX="-297" positionY="-36" width="128" height="270"/>
+        <element name="LabelEdition" positionX="-81" positionY="-18" width="128" height="105"/>
+        <element name="Module" positionX="106" positionY="99" width="128" height="105"/>
+        <element name="Newsstory" positionX="81" positionY="-45" width="128" height="105"/>
+        <element name="Room" positionX="-9" positionY="252" width="128" height="90"/>
+        <element name="Society" positionX="-54" positionY="162" width="128" height="88"/>
+        <element name="TVSegment" positionX="-225" positionY="279" width="128" height="90"/>
+        <element name="YearPeriods" positionX="-63" positionY="351" width="128" height="120"/>
+    </elements>
+</model>
